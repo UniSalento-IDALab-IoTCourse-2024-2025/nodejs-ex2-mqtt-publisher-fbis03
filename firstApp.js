@@ -18,14 +18,14 @@ setInterval(function() {
 		'temperature': Math.random()
 	})
 	const options = {
-	hostname: 'localhost',
-	port: 3000,
-	path: '/temperature',
-	method: 'POST',
-	headers: {
-	      'Content-Type': 'application/json',
-	      'Content-Length': Buffer.byteLength(postData),
-	},
+		hostname: 'localhost',
+		port: 3000,
+		path: '/temperature',
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			'Content-Length': Buffer.byteLength(postData),
+		},
 	};
 
 	client.publish("test-topic-handson/data", postData);
